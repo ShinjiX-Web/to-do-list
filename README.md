@@ -1,5 +1,7 @@
 # To-do List - React App
 
+<img src="https://github.com/ShinjiX-Web/to-do-list/blob/main/To-Do.PNG">
+
 ### `Group 3 - Nate, Walter, and Allen`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
