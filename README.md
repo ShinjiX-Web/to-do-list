@@ -1,5 +1,7 @@
 # To-do List - React App
 
+### `Group 3 - Nate, Walter, and Allen`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
