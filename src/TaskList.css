@@ -10,3 +10,9 @@
     font-weight: 600;
     letter-spacing: 2px;
   }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

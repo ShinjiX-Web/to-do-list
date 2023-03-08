@@ -57,7 +57,7 @@ function App() {
     }, []);
 
     return (
-        <Container className="d-flex flex-column align-items-center mt-5">
+        <Container className="d-flex flex-column align-items-center mt-5 container">
             <div className="d-flex justify-content-between align-items-center w-100">
                 <h1 className='text-primary'>To-Do List</h1>
                 {/* <h3>{currentTime}</h3> */}
