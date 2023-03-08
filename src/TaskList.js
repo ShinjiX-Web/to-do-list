@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Container, Form, ListGroup } from 'react-bootstrap';
 import './TaskList.css';
 
 function App() {
+
     const [tasks, setTasks] = useState([
         {
             id: 1,
@@ -29,15 +30,17 @@ function App() {
 
     const handleAddTask = (event) => {
         event.preventDefault();
-        const newTask = {
-            id: tasks.length + 1,
-            checked: false,
-            taskName: newTaskName,
-            remarks: newTaskRemarks
-        };
-        setTasks([...tasks, newTask]);
-        setNewTaskName('');
-        setNewTaskRemarks('');
+        if (newTaskName.trim() !== '') {
+            const newTask = {
+                id: tasks.length + 1,
+                checked: false,
+                taskName: newTaskName.trim(),
+                remarks: newTaskRemarks.trim()
+            };
+            setTasks([...tasks, newTask]);
+            setNewTaskName('');
+            setNewTaskRemarks('');
+        }
     };
 
     const handleDeleteTask = (taskId) => {
