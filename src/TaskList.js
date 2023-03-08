@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Container, Form, ListGroup } from 'react-bootstrap';
 import './TaskList.css';
 
@@ -27,6 +27,7 @@ function App() {
 
     const [newTaskName, setNewTaskName] = useState('');
     const [newTaskRemarks, setNewTaskRemarks] = useState('');
+    const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
 
     const handleAddTask = (event) => {
         event.preventDefault();
@@ -36,6 +37,7 @@ function App() {
                 checked: false,
                 taskName: newTaskName.trim(),
                 remarks: newTaskRemarks.trim()
+
             };
             setTasks([...tasks, newTask]);
             setNewTaskName('');
@@ -47,10 +49,18 @@ function App() {
         setTasks(tasks.filter((task) => task.id !== taskId));
     };
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(new Date().toLocaleTimeString());
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <Container className="d-flex flex-column align-items-center mt-5">
             <div className="d-flex justify-content-between align-items-center w-100">
-                <h1>To-Do List</h1>
+                <h1 className='text-primary'>To-Do List</h1>
+                {/* <h3>{currentTime}</h3> */}
                 <Form onSubmit={handleAddTask} className="d-flex align-items-center">
                     <Form.Control
                         type="text"
@@ -93,7 +103,8 @@ function App() {
                             Delete
                         </Button>
                     </ListGroup.Item>
-                ))}
+                ))}<br />
+                <h3 className='text-primary time'>{currentTime}</h3>
             </ListGroup>
         </Container>
     );
