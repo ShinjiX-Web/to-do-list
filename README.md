@@ -1,5 +1,7 @@
 # To-do List - React App
 
+<img src="https://github.com/ShinjiX-Web/to-do-list/blob/main/To-Do.PNG">
+
 ### `Group 3 - Nate, Walter, and Allen`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -9,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm install`
-Run this command first to install modules to run the code
+Run this command in your root directory first to install modules to run the code
 
 ### `npm start`
 
