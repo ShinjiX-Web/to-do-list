@@ -4,7 +4,7 @@
 
 # Changelog:
 
-- Added Empty Task strict rule. Users cannot add an empty task.
+- Added Empty Task validation rule. Users cannot add an empty task.
 - Added real-time clock below the task/new task.
 
 ### `Group 3 - Nate, Walter, and Allen`
