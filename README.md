@@ -7,8 +7,6 @@
 - Added Empty Task validation rule. Users cannot add an empty task.
 - Added real-time clock below the task/new task.
 
-### `Group 3 - Nate, Walter, and Allen`
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
